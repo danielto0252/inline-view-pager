@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string-array name="album_cover_array">
+        <item>beatles_abby</item>
+        <item>beatles_harddays</item>
+        <item>coltrane_bluetrane</item>
+        <item>daft_ram</item>
+        <item>dangelo_voodoo</item>
+    </string-array>
     <string name="app_name">InlineViewPager</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
