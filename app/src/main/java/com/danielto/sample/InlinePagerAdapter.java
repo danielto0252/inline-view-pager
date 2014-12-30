@@ -25,7 +25,7 @@ public class InlinePagerAdapter extends PagerAdapter {
 
     public InlinePagerAdapter(Context context) {
         this.context = context;
-        this.layoutInflater = LayoutInflater.from(context);
+        this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -35,12 +35,12 @@ public class InlinePagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object o) {
-        return false;
+        return view == (View) o;
     }
 
     @Override
     public View instantiateItem(ViewGroup container, int position) {
-        View view = layoutInflater.inflate(R.layout.pager_item, container, false);
+        View view = layoutInflater.inflate(R.layout.pager_item, null, false);
 
 //        ImageView imageView = (ImageView) view.findViewById(R.id.album_cover_view);
         String name = context.getResources().getStringArray(R.array.album_cover_array)[position];
